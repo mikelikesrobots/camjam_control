@@ -50,7 +50,7 @@ class CamjamMovement(Node):
         self._motor_b_rev.start(0)
 
         self.get_logger().info("Subscribing to topics...")
-        self.line_sub_ = self.create_subscription(
+        self.vel_sub_ = self.create_subscription(
             Twist,
             "cmd_vel",
             self._vel_callback,
